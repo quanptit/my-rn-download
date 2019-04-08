@@ -35,9 +35,9 @@ export class DownloadStateUtils {
         return this.setDownloadState(partsummary.pathBaiHoc.hashCode(), isDownloaded)
     }
 
-    static async isDownloadedPartSummary(partsummary: PartSummary): Promise<boolean> {
+    static async isDownloadedPartSummary(partsummary: PartSummary, downloadedSavedValue?: string): Promise<boolean> {
         if (partsummary.pathBaiHoc != null)
-            return this.isDownloaded(partsummary.pathBaiHoc.hashCode());
+            return this.isDownloaded(partsummary.pathBaiHoc.hashCode(), downloadedSavedValue);
         return false;
     }
 

@@ -30,9 +30,9 @@ export class DownloadStateUtils {
     static async setDownloadStatePartSummary(partsummary, isDownloaded) {
         return this.setDownloadState(partsummary.pathBaiHoc.hashCode(), isDownloaded);
     }
-    static async isDownloadedPartSummary(partsummary) {
+    static async isDownloadedPartSummary(partsummary, downloadedSavedValue) {
         if (partsummary.pathBaiHoc != null)
-            return this.isDownloaded(partsummary.pathBaiHoc.hashCode());
+            return this.isDownloaded(partsummary.pathBaiHoc.hashCode(), downloadedSavedValue);
         return false;
     }
     static removeAllDownloaded() {
