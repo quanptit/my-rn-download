@@ -2,8 +2,13 @@ import {AsyncStorage} from "react-native";
 import {PartSummary} from "my-rn-base-utils";
 
 export class DownloadStateUtils {
-    static async isDownloaded(key: string | number) {
-        const value: string = await AsyncStorage.getItem("DOWNLOADED");
+
+    static async getDownloadedSavedValue(): Promise<string> {
+        return AsyncStorage.getItem("DOWNLOADED");
+    }
+
+    static async isDownloaded(key: string | number, downloadedSavedValue?: string) {
+        const value = downloadedSavedValue !== undefined ? downloadedSavedValue : await AsyncStorage.getItem("DOWNLOADED");
         if (value == undefined) {
             return false
         }
