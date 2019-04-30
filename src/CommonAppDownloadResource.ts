@@ -103,6 +103,11 @@ const addAllLink = function (result: ResultType, listItem: any[]) {
         if (item == undefined) continue;
         addAudioAndImgLink(result, item);
         addAudioAndImgLink(result, item.sample); // nếu item là vocabulary
+        if (item.voca1 != null){
+            addAudioAndImgLink(result, item.voca1);
+            if (item.voca2 != null)
+                addAudioAndImgLink(result, item.voca2);
+        }
         addDownloadForItemOfPartDetail(result, item);
         addDownloadForOther(result, item);
     }
