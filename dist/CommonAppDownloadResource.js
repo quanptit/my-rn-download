@@ -125,6 +125,8 @@ const addDownloadForOther = function (result, item) {
         addAllLink(result, item.listPartDetailBaiTap);
     if (item.listItemBaiTap != null)
         addAllLink(result, item.listItemBaiTap);
+    if (item.listItemBaiGiang != null)
+        addAllLink(result, item.listItemBaiGiang);
     if (item.vocabularyObjs != null)
         addAllLink(result, item.vocabularyObjs);
     if (item.groupQuestions != null)
