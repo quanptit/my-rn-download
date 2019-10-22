@@ -5,14 +5,23 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "install_npm": "yarn install",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ads"
+    "react-native"
   ],
   "author": "Quan Trinh Van",
-  "license": "Quan Trinh Van",
-  "nativePackage": true,
-  "dependencies": {},
+  "license": "ISC",
+  "homepage": "https://github.com/quanptit/my-rn-download",
+  "bugs": "https://github.com/quanptit/my-rn-download/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quanptit/my-rn-download.git"
+  },
+  "dependencies": {
+    "my-rn-cached-image": "^1.4.5"
+  },
   "devDependencies": {},
   "peerDependencies": {}
 }

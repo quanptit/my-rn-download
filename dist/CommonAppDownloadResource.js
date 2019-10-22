@@ -1,5 +1,5 @@
 import RNFetchBlob from 'rn-fetch-blob';
-import { ImageCacheManager } from "react-native-cached-image";
+import { ImageCacheManager } from "my-rn-cached-image";
 import { getStringsCommon } from "my-rn-common-resource";
 import { FileUtils, isEmpty, sendError } from 'my-rn-base-utils';
 import { DialogUtils, Toast } from "my-rn-base-component";
